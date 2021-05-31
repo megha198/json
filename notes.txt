@@ -1,0 +1,431 @@
+1)What is JSON?
+JSON stands for JavaScript Object Notation
+JSON is a lightweight data-interchange format
+JSON is "self-describing" and easy to understand
+JSON is language independent *
+
+==>Why use JSON?
+Since the JSON format is text only, it can easily be sent to and from a server, and used as a data format by any programming language.
+
+JavaScript has a built in function to convert a string, written in JSON format, into native JavaScript objects:
+
+JSON.parse()
+
+So, if you receive data from a server, in JSON format, you can use it like any other JavaScript object.
+
+==>JSON Syntax Rules
+JSON syntax is derived from JavaScript object notation syntax:
+
+Data is in name/value pairs
+Data is separated by commas
+Curly braces hold objects
+Square brackets hold arrays
+
+==>JSON Data - A Name 
+JSON data is written as name/value pairs.
+
+A name/value pair consists of a field name (in double quotes), followed by a colon, followed by a value:
+
+The JSON format is almost identical to JavaScript objects.
+
+In JSON, keys must be strings, written with double quotes:
+{ "name":"John" }
+
+==>JSON Values
+In JSON, values must be one of the following data types:
+
+a string
+a number
+an object (JSON object)
+an array
+a boolean
+null
+
+==>JSON Uses JavaScript Syntax
+Because JSON syntax is derived from JavaScript object notation, very little extra software is needed to work with JSON within JavaScript.
+
+With JavaScript you can create an object and assign data to it, like this:
+
+Example
+var person = { name: "John", age: 31, city: "New York" };
+
+==>JSON Files
+The file type for JSON files is ".json"
+The MIME type for JSON text is "application/json"
+
+==>JavaScript Arrays as JSON
+The same way JavaScript objects can be used as JSON,
+ JavaScript arrays can also be used as JSON.
+------------------------------------------------------------------------------------------
+ 2)JSON Data Types
+ Valid Data Types
+In JSON, values must be one of the following data types:
+
+a string
+a number
+an object (JSON object)
+an array
+a boolean
+null
+
+1)JSON Strings
+Strings in JSON must be written in double quotes.
+
+Example
+{ "name":"John" }
+
+2)JSON Numbers
+Numbers in JSON must be an integer or a floating point.
+
+Example
+{ "age":30 }
+
+3)JSON Objects
+Values in JSON can be objects.
+
+Example
+{
+"employee":{ "name":"John", "age":30, "city":"New York" }
+}
+Objects as values in JSON must follow the same rules as JSON objects.
+
+4)JSON Arrays
+Values in JSON can be arrays.
+
+Example
+{
+"employees":[ "John", "Anna", "Peter" ]
+}
+
+5)JSON Booleans
+Values in JSON can be true/false.
+
+Example
+{ "sale":true }
+
+6)JSON null
+Values in JSON can be null.
+
+Example
+{ "middlename":null }
+
+------------------------------------------------------------------------------------------
+
+3)JSON.parse()
+A common use of JSON is to exchange data to/from a web server.
+
+When receiving data from a web server, the data is always a string.
+
+Parse the data with JSON.parse(), and the data becomes a JavaScript object.
+
+------------------------------------------------------------------------------------------
+4)JSON Objects
+
+Object Syntax
+Example
+{ "name":"John", "age":30, "car":null }
+
+>JSON objects are surrounded by curly braces {}.
+>JSON objects are written in key/value pairs.
+>Keys must be strings, and values must be a valid JSON data type (string, number, object, array, boolean or null).
+>Keys and values are separated by a colon.
+>Each key/value pair is separated by a comma.
+
+==>Accessing Object Values
+1)You can access the object values by using dot (.) notation:
+
+Example
+myObj = { "name":"John", "age":30, "car":null };
+x = myObj.name;
+
+2)You can also access the object values by using bracket ([]) notation:
+
+Example
+myObj = { "name":"John", "age":30, "car":null };
+x = myObj["name"];
+
+==>Looping an Object
+i)You can loop through object properties by using the for-in loop:
+ii)In a for-in loop, use the bracket notation to access the property values:
+
+==>Nested JSON Objects
+Values in a JSON object can be another JSON object.
+You can access nested JSON objects by using the dot notation or bracket notation:
+
+Example
+myObj = {
+  "name":"John",
+  "age":30,
+  "cars": {
+    "car1":"Ford",
+    "car2":"BMW",
+    "car3":"Fiat"
+  }
+ }
+
+ ==>Modify Values
+i)You can use the dot notation to modify any value in a JSON object
+ii)You can also use the bracket notation to modify a value in a JSON object
+
+==>Delete Object Properties
+Use the delete keyword to delete properties from a JSON object
+----------------------------------------------------------------------------------------
+5)JSON Arrays
+
+==>Arrays in JSON Objects
+Arrays in JSON are almost the same as arrays in JavaScript.
+
+In JSON, array values must be of type string, number, object, array, boolean or null.
+
+In JavaScript, array values can be all of the above, plus any other valid JavaScript expression, including functions, dates, and undefined.
+
+==>Accessing Array Values
+i)Arrays can be values of an object property
+{
+"name":"John",
+"age":30,
+"cars":[ "Ford", "BMW", "Fiat" ]
+}
+
+ii)You access the array values by using the index number:
+
+Example
+x = myObj.cars[0];
+
+------------------------------------------------------------------------------------------
+                                    XML
+
+XML stands for eXtensible Markup Language.
+
+XML was designed to store and transport data.
+
+XML was designed to be both human- and machine-readable.   
+
+==>Why Study XML?
+XML plays an important role in many different IT systems.
+
+XML is often used for distributing data over the Internet.
+
+It is important (for all types of software developers!) to have a good understanding of XML.
+
+==>How Can XML be Used?
+XML is used in many aspects of web development.
+
+XML is often used to separate data from presentation.
+
+==>XML Separates Data from Presentation
+XML does not carry any information about how to be displayed.
+
+The same XML data can be used in many different presentation scenarios.
+
+Because of this, with XML, there is a full separation between data and presentation.
+---------------------------------------------------------------------------------
+==>XML Syntax Rules
+The syntax rules of XML are very simple and logical. The rules are easy to learn, and easy to use.
+
+XML Documents Must Have a Root Element
+XML documents must contain one root element that is the parent of all other elements:
+
+<root>
+  <child>
+    <subchild>.....</subchild>
+  </child>
+</root>
+
+==>The XML Prolog
+This line is called the XML prolog:
+
+<?xml version="1.0" encoding="UTF-8"?>
+The XML prolog is optional. If it exists, it must come first in the document.
+
+XML documents can contain international characters, like Norwegian øæå or French êèé.
+
+To avoid errors, you should specify the encoding used, or save your XML files as UTF-8.
+
+UTF-8 is the default character encoding for XML documents.
+------------------------------------------------------------------------------------------
+==>XML Parser
+All major browsers have a built-in XML parser to access and manipulate XML.
+==>XML Parser
+The XML DOM (Document Object Model) defines the properties and methods for accessing and editing XML.
+
+However, before an XML document can be accessed, it must be loaded into an XML DOM object.
+
+All modern browsers have a built-in XML parser that can convert text into an XML DOM object.
+------------------------------------------------------------------------------------------
+                                      XML DOM
+
+What is the DOM?
+The DOM defines a standard for accessing and manipulating documents:
+The HTML DOM defines a standard way for accessing and manipulating HTML documents. It presents an HTML document as a tree-structure.
+
+The XML DOM defines a standard way for accessing and manipulating XML documents. It presents an XML document as a tree-structure.
+------------------------------------------------------------------------------------------
+                                    AJAX
+
+    1) AJAX is a developer's dream, because you can:
+
+Update a web page without reloading the page
+Request data from a server - after the page has loaded
+Receive data from a server - after the page has loaded
+Send data to a server - in the background 
+
+==>AJAX - The XMLHttpRequest Object
+The keystone of AJAX is the XMLHttpRequest object.
+
+The XMLHttpRequest Object
+All modern browsers support the XMLHttpRequest object.
+
+The XMLHttpRequest object can be used to exchange data with a server behind the scenes. This means that it is possible to update parts of a web page, without reloading the whole page.
+
+==>Create an XMLHttpRequest Object
+All modern browsers (Chrome, Firefox, IE7+, Edge, Safari Opera) have a built-in XMLHttpRequest object.
+
+Syntax for creating an XMLHttpRequest object:
+
+variable = new XMLHttpRequest();
+
+------------------------------------------------------------------------------------------
+2)AJAX - Send a Request To a Server
+The XMLHttpRequest object is used to exchange data with a server.
+
+Send a Request To a Server
+To send a request to a server, we use the open() and send() methods of the XMLHttpRequest object:
+
+xhttp.open("GET", "ajax_info.txt", true);
+xhttp.send();
+
+methods used:
+1)open(method, url, async)==>	Specifies the type of request
+                            method: the type of request: GET or POST
+                            url: the server (file) location
+                           async: true (asynchronous) or false (synchronous)
+2)send()==>	Sends the request to the server (used for GET)
+3)send(string)==>	Sends the request to the server (used for POST)
+
+==>GET or POST?
+GET is simpler and faster than POST, and can be used in most cases.
+
+However, always use POST requests when:
+
+A cached file is not an option (update a file or database on the server).
+Sending a large amount of data to the server (POST has no size limitations).
+Sending user input (which can contain unknown characters), POST is more robust and secure than GET.
+
+i)GET Requests
+A simple GET request:
+
+Example
+xhttp.open("GET", "demo_get.asp", true);
+xhttp.send();
+
+ii)POST Requests
+A simple POST request:
+
+Example
+xhttp.open("POST", "demo_post.asp", true);
+xhttp.send();
+------------------------------------------------------------------------------------------
+                                  AJAX - Server Response
+
+1)The onreadystatechange Property
+The readyState property holds the status of the XMLHttpRequest.
+
+The onreadystatechange property defines a function to be executed when the readyState changes.
+
+The status property and the statusText property holds the status of the XMLHttpRequest object.
+
+
+onreadystatechange==> 	Defines a function to be called when the readyState property changes
+                   readyState	Holds the status of the XMLHttpRequest.
+                   0: request not initialized
+                   1: server connection established
+                  2: request received
+                    3: processing request
+                   4: request finished and response is ready
+status==>	200: "OK"
+          403: "Forbidden"
+          404: "Page not found"
+
+statusText==>	Returns the status-text (e.g. "OK" or "Not Found")
+The onreadystatechange function is called every time the readyState changes.
+
+When readyState is 4 and status is 200, the response is ready:   
+
+------------------------------------------------------------------------------------------
+                           
+
+JSON vs XML
+Both JSON and XML can be used to receive data from a web server.
+
+The following JSON and XML examples both define an employees object, with an array of 3 employees:
+
+JSON Example
+{"employees":[
+  { "firstName":"John", "lastName":"Doe" },
+  { "firstName":"Anna", "lastName":"Smith" },
+  { "firstName":"Peter", "lastName":"Jones" }
+]}
+
+XML Example
+<employees>
+  <employee>
+    <firstName>John</firstName> <lastName>Doe</lastName>
+  </employee>
+  <employee>
+    <firstName>Anna</firstName> <lastName>Smith</lastName>
+  </employee>
+  <employee>
+    <firstName>Peter</firstName> <lastName>Jones</lastName>
+  </employee>
+</employees>
+ 
+ JSON is Like XML Because
+Both JSON and XML are "self describing" (human readable)
+Both JSON and XML are hierarchical (values within values)
+Both JSON and XML can be parsed and used by lots of programming languages
+Both JSON and XML can be fetched with an XMLHttpRequest
+JSON is Unlike XML Because
+JSON doesn't use end tag
+JSON is shorter
+JSON is quicker to read and write
+JSON can use arrays
+The biggest difference is:
+
+ XML has to be parsed with an XML parser. JSON can be parsed by a standard JavaScript function.
+
+Why JSON is Better Than XML
+XML is much more difficult to parse than JSON.
+JSON is parsed into a ready-to-use JavaScript object.
+
+For AJAX applications, JSON is faster and easier than XML:
+
+Using XML
+
+Fetch an XML document
+Use the XML DOM to loop through the document
+Extract values and store in variables
+Using JSON
+
+Fetch a JSON string
+JSON.Parse the JSON string
+
+==>REST is abbreviated as Representational State Transfer is a phrase coined by Mr. Roy Fielding in the year 2000. 
+It is a structural design approach for crafting loosely attached applications using HTTP, which is often implemented in the growth of web services. 
+Web services have become an essential element of development for web developers.
+
+JSON is the way to define your data structure and to hold your data as a single object.
+
+REST is the way how data will be communicated between server and client. A client can be a browser, mobile app or even another server.
+
+Here is an example of JSON object
+
+data = { 
+  "id": 5, 
+  "name":"John Doe", 
+  "age": 50, 
+  "cars":[ "Toyota", "Honda", "Suzuki" ] 
+} 
+and here is an example of REST to GET this data from server
+
+https://www.yourserver.com/members/5 
